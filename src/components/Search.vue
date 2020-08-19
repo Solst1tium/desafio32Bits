@@ -1,6 +1,6 @@
 <template>
   <div>
-    
+    <input type="text" placeholder="buscar">
   </div>
 </template>
 <script>

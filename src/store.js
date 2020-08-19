@@ -4,7 +4,10 @@ import Vuex from 'vuex';
 Vue.use(Vuex);
 
 const store = new Vuex.Store({
-  state: {},
+  state: {
+    title:"32 bits",
+    subtitle: "Juegos de Pc Y Consolas"
+  },
   getters: {},
   mutations: {},
   actions: {}

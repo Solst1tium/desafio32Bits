@@ -1,13 +1,16 @@
 <template>
     <div>
         
-        <h1>32bits</h1>
-        <h2>Juegos de Pc Y Consolas</h2>        
+        <h1 v-text="title"></h1>
+        <h2 v-text="subtitle"></h2>        
         Acá va tu contenido
     </div>
 </template>
 <script>
 import {mapState} from 'vuex'
 export default {
+    computed:{
+        ...mapState(['title', 'subtitle'])
+    }
 }
 </script>
