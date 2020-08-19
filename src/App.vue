@@ -1,28 +1,47 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <ul>
+      <li><router-link :to="{name: 'home'}">Inicio</router-link></li>
+      <li><router-link :to="{name: 'search'}">Busqueda</router-link></li>
+    </ul>
+    <transition name="vista">
+      <router-view></router-view>
+    </transition>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style scoped>
+ul{
+  list-style-type: none;
+ margin: 0;
+ padding: 0;
+ overflow: hidden;
+ background-color: #333333;
+
+}
+li {
+ float: left;
+}
+ 
+li a {
+ display: block;
+ color: white;
+ text-align: center;
+ padding: 16px;
+ text-decoration: none;
+}
+
+.vista-enter-active, .vista-leave-active {
+    transition: opacity .1s;
+}
+.vista-enter, .vista-leave-to{
+    opacity: 0;
 }
 </style>
