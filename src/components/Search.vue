@@ -1,6 +1,6 @@
 <template>
   <div>    
-    <li> Cantidad de juegos totales {{games.length}} </li>
+   <li> Cantidad de juegos totales {{games.length}} </li>
     <input v-model="search" type="text" placeholder="buscar">
     <GameList :games='filterGames'></GameList>
   </div>
