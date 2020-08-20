@@ -48,7 +48,7 @@ const store = new Vuex.Store({
         setTimeout(() =>{
           commit('DEDUCT_STOCK', game)
           setTimeout(() => {
-            commit('ADD_SALE', {id:game.id, name: game.name, precio: game.price}) 
+            commit('ADD_SALE', {id:game.id, name: game.name, price: game.price}) 
             alert("Venta realizada")
           }, 1500);
         }, 2000)      
